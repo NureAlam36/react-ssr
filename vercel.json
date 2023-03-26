@@ -1,0 +1,6 @@
+{
+    "version": 1.0,
+    "name": "react-ssr",
+    "builds": [{"src": "server.js", "use": "@vercel/node"}],
+    "routes": [{"src": "/(.*)", "use": "/server.js"}]
+}
