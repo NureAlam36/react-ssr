@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "simple-react-redux-ssr",
   "version": "1.0.0",
   "description": "Server side rendiring application of chareacters of Rick and Morty show in react and redux",
