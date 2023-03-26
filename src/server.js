@@ -7,7 +7,7 @@ import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 
 const app = Express()
-const port = 3000
+const port = process.env.PORT || 3000;
 
 //Serve static files
 app.use(Express.static('build/public'));
@@ -54,5 +54,6 @@ function renderFullPage(html,styles, preloadedState) {
     `
 }
 
-app.listen(port)
-console.log(`Serving at http://localhost:${port}`);
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+})
